@@ -7,12 +7,14 @@ import {
   MenuButton,
   MenuItem,
   MenuList,
+  useColorMode,
 } from '@chakra-ui/react';
 import { useState } from 'react';
 import IconHamburger from '../SVGs/IconHamburger';
 
 export default function Header() {
   const [isBurgerOpen, setIsBurgerOpen] = useState(false);
+  const { colorMode, toggleColorMode } = useColorMode();
 
   return (
     <Flex
@@ -51,7 +53,9 @@ export default function Header() {
         </MenuList>
       </Menu>
 
-      <Button colorScheme="blackAlpha">Change the mood</Button>
+      <Button onClick={toggleColorMode} colorScheme="blackAlpha">
+        Change to {colorMode === 'light' ? 'dark' : 'light'}
+      </Button>
     </Flex>
   );
 }
