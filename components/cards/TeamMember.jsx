@@ -1,7 +1,6 @@
 import { Avatar, Flex, Heading, Text } from '@chakra-ui/react';
 
 export default function TeamMember({ name, title }) {
-  console.log(name.split(' ')[0]);
   return (
     <Flex align="center" direction="column">
       <Avatar

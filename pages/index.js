@@ -1,13 +1,8 @@
-import { Box, Flex, HStack, Icon, Text } from '@chakra-ui/react';
-import {
-  IoLogoFacebook,
-  IoLogoInstagram,
-  IoLogoLinkedin,
-  IoLogoTiktok,
-  IoLogoYoutube,
-} from 'react-icons/io5';
+import { Box, Flex, Text } from '@chakra-ui/react';
+
 import HeroVideo from '../components/cards/HeroVideo';
 import TeamMember from '../components/cards/TeamMember';
+import Footer from '../components/navigation/Footer';
 import Header from '../components/navigation/Header';
 
 export default function Home() {
@@ -49,19 +44,7 @@ export default function Home() {
         </Flex>
       </main>
 
-      <footer>
-        <Text fontSize="22px" align="center" mx={'56'} mt={'24'}>
-          Not ready yet? Follow our journey on Social Media:
-        </Text>
-
-        <HStack justifyContent="center" gap={4} mt={3} mb={14}>
-          <Icon boxSize={7} as={IoLogoLinkedin}></Icon>
-          <Icon boxSize={7} as={IoLogoFacebook}></Icon>
-          <Icon boxSize={7} as={IoLogoYoutube}></Icon>
-          <Icon boxSize={7} as={IoLogoInstagram}></Icon>
-          <Icon boxSize={7} as={IoLogoTiktok}></Icon>
-        </HStack>
-      </footer>
+      <Footer />
     </>
   );
 }

@@ -11,7 +11,8 @@ const overrides = {
   styles: {
     global: (props) => ({
       body: {
-        bg: mode('white', '#0A0406')(props)
+        bg: mode('#fff', '#212121')(props),
+        color: mode("#000", "#fff")(props)
       },
     }),
   },
