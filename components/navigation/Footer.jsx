@@ -15,7 +15,7 @@ export default function Footer() {
 
   return (
     <footer>
-      <Text fontSize="22px" align="center" mx={'56'} mt={'24'}>
+      <Text fontSize="22px" align="center" mt={'24'}>
         Not ready yet? Follow our journey on Social Media:
       </Text>
 

@@ -6,7 +6,6 @@ export default function TeamMember({ name, title }) {
       <Avatar
         size="2xl"
         name={name}
-        bg="teal.500"
         src={`/home/${name.split(' ')[0]}-portrait.webp`}
       />
       <Heading mt={5} mb={2} fontSize={22} size="md" fontWeight={500}>
