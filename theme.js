@@ -8,6 +8,11 @@ const overrides = {
     heading: `'Mohave', sans-serif, ${base.fonts?.heading}`,
     body: `'Mohave', sans-serif, ${base.fonts?.body}`,
   },
+  colors: {
+    green_grass: {
+      100: "#4DB33B"
+    }
+  },
   styles: {
     global: (props) => ({
       body: {
