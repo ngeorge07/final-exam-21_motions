@@ -1,4 +1,7 @@
 import "@fontsource/mohave/400.css";
+import "@fontsource/mohave/500.css";
+import "@fontsource/mohave/600.css";
+import "@fontsource/mohave/700.css";
 
 import { ChakraProvider } from '@chakra-ui/react';
 import '../styles/globals.css';

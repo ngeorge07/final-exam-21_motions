@@ -1,16 +1,22 @@
 import { extendTheme, theme as base } from '@chakra-ui/react';
+import { mode } from '@chakra-ui/theme-tools';
 
-// 2. Add your color mode config
-const config = {
+const overrides = {
   initialColorMode: 'light',
   useSystemColorMode: false,
   fonts: {
     heading: `'Mohave', sans-serif, ${base.fonts?.heading}`,
     body: `'Mohave', sans-serif, ${base.fonts?.body}`,
   },
-};
+  styles: {
+    global: (props) => ({
+      body: {
+        bg: mode('white', '#0A0406')(props)
+      },
+    }),
+  },
+}
 
-// 3. extend the theme
-const theme = extendTheme(config);
+const theme = extendTheme(overrides);
 
 export default theme;

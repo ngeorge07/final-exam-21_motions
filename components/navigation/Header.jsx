@@ -27,7 +27,7 @@ export default function Header() {
       justifyContent="space-between"
     >
       <Heading as="h2" size="lg" color="white">
-        21 MOTIONS LOGO
+        21 MOTIONS
       </Heading>
 
       <Menu placement="bottom">

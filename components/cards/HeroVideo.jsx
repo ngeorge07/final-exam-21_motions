@@ -4,7 +4,11 @@ export default function HeroVideo() {
   return (
     <AspectRatio _before={{ content: 'none' }} w="100%" h="100%" ratio={16 / 9}>
       <video
-        style={{ position: 'relative', height: '100vh', width: '100vw' }}
+        style={{
+          position: 'relative',
+          height: '100vh',
+          width: '100vw',
+        }}
         autoPlay
         muted
         loop
