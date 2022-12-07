@@ -1,19 +1,24 @@
-import { Button, Stack } from '@chakra-ui/react';
+import { Box } from '@chakra-ui/react';
+import HeroVideo from '../components/cards/HeroVideo';
+import Header from '../components/navigation/Header';
+
 export default function Home() {
   return (
-    <Stack spacing={4} direction="row" align="center">
-      <Button colorScheme="teal" size="xs">
-        Button
-      </Button>
-      <Button colorScheme="teal" size="sm">
-        Button
-      </Button>
-      <Button colorScheme="teal" size="md">
-        Button
-      </Button>
-      <Button colorScheme="teal" size="lg">
-        Button
-      </Button>
-    </Stack>
+    <>
+      <Header />
+
+      <main>
+        <HeroVideo />
+
+        <Box position="relative">
+          <h1>ASDASD</h1>
+          <h1>ASDASD</h1>
+          <h1>ASDASD</h1>
+          <h1>ASDASD</h1>
+          <h1>ASDASD</h1>
+          <h1>ASDASD</h1>
+        </Box>
+      </main>
+    </>
   );
 }

@@ -1,0 +1,47 @@
+@mixin animate($animation, $duration, $method, $times) {
+  animation: $animation $duration $method $times;
+}
+@mixin keyframes($name) {
+  @keyframes #{$name} {
+    @content;
+  }
+}
+
+.bar1 {
+  @include keyframes(burgerAnim1) {
+    0% {
+      transform: rotate(0deg) translate(0px, 0px);
+    }
+    50% {
+      transform: rotate(90deg) translate(0px, -13px);
+    }
+    100% {
+      transform: rotate(45deg) translate(6px, -13px);
+    }
+  }
+  @include animate(burgerAnim1, 0.5s, linear, 1);
+  animation-fill-mode: forwards;
+}
+
+.bar2 {
+  @include keyframes(burgerAnim2) {
+    0% {
+      transform: rotate(0deg) translate(0px, 0px);
+    }
+    50% {
+      transform: rotate(-90deg) translate(-43.8px, 4px);
+    }
+    100% {
+      transform: rotate(-45deg) translate(-20px, 4px);
+    }
+  }
+  @include animate(burgerAnim2, 0.5s, linear, 1);
+  animation-fill-mode: forwards;
+}
+
+.revert {
+  animation-fill-mode: forwards;
+
+  transform: rotate(0deg) translate(0px, 0px);
+  transition: all 1s ease-out;
+}
