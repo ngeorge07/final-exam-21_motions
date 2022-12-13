@@ -6,19 +6,27 @@ const HeroLink = {
     fontWeight: 'semibold',
     fontSize: 20,
     maxW: { base: '320px', sm: '390px' },
-    w: { base: '100%', md: '50%' },
+    w: { base: '98%', md: '50%' },
   },
   variants: {
-    primary: (props) => ({
+    primary: {
       color: 'white',
-      //   backgroundColor: mode('inchworm', 'american_green')(props),
       backgroundColor: 'american_green',
-    }),
-    secondary: (props) => ({
+      _hover: {
+        backgroundColor: 'may_green',
+        transition: 'background-color 0.2s cubic-bezier(0.73, 0, 0.38, 1)',
+      },
+    },
+    secondary: {
       color: 'black',
-      //   backgroundColor: mode('inchworm', 'american_green')(props),
       backgroundColor: 'white',
-    }),
+      borderWidth: 2,
+      _hover: {
+        borderWidth: 2,
+        borderColor: 'may_green',
+        transition: 'border-color 0.3s cubic-bezier(0.73, 0, 0.38, 1)',
+      },
+    },
   },
 };
 

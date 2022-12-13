@@ -7,6 +7,7 @@ const colors = {
   // Secondary colors
   american_green: '#4DB33B',
   inchworm: '#A6FF5F',
+  may_green: "#419233",
 
   // Accent colors
   frostbite: '#F531B3',

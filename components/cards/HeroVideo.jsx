@@ -11,6 +11,7 @@ export default function HeroVideo() {
             position: 'relative',
             height: '100vh',
             width: '100vw',
+            // opacity: '70%',
           }}
           autoPlay
           muted
