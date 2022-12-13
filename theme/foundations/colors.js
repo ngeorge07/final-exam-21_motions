@@ -12,6 +12,10 @@ const colors = {
   frostbite: '#F531B3',
   egyptian_blue: '#0E29B3',
   portland_orange: '#FF622E',
+
+  // Error colors
+  venetian_red: '#F64444',
+  middle_yellow: '#FFEB00',
 };
 
 export default colors;

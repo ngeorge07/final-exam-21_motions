@@ -1,13 +1,18 @@
 import { mode } from '@chakra-ui/theme-tools';
 
 const Link = {
+  baseStyle: {
+    _hover: {
+      textDecoration: 'none',
+    },
+  },
+
   variants: {
     'inline-link': (props) => ({
       color: mode('american_green', 'inchworm')(props),
       display: 'inline-flex',
       flexDirection: 'column',
       _hover: {
-        textDecoration: 'none',
         _after: {
           width: '100%',
         },

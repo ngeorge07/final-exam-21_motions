@@ -1,53 +1,28 @@
-import { Button, Flex, Heading, VStack } from '@chakra-ui/react';
+import { Flex, Heading, VStack } from '@chakra-ui/react';
+import NextLink from 'next/link';
+import HeroLink from '../HeroLink';
 
 export default function PropositionCard() {
   return (
     <VStack w="fit-content" zIndex={2} mt={20}>
-      <Heading
-        fontSize={[37, 40, 58]}
-        maxW="500px"
-        color="#fff"
-        textAlign={['center']}
-      >
+      <Heading as="h1" variant="h1">
         ROOTED IN CREATIVITY. CONNECTED BY GROWTH
       </Heading>
 
       <Flex
-        direction={['column', 'row']}
-        maxW="500px"
-        w="100%"
+        direction={{ base: 'column', md: 'row' }}
+        maxW={{ sm: '500px' }}
+        w={{ base: '90%' }}
         justifyContent="space-between"
         gap="5"
         alignItems={['center']}
       >
-        <Button
-          fontSize={20}
-          variant="solid"
-          color="#fff"
-          w={['75%', '100%']}
-          bgColor="green_grass"
-          _hover={{
-            backgroundColor: 'green_grass',
-            borderWidth: '2px',
-            borderColor: '#fff',
-          }}
-        >
+        <HeroLink as={NextLink} href="/test" variant="secondary">
           CONTENT CREATORS
-        </Button>
-        <Button
-          fontSize={20}
-          variant="solid"
-          color="#000"
-          w={['75%', '100%']}
-          bgColor="#fff"
-          _hover={{
-            backgroundColor: '#fff',
-            borderWidth: '2px',
-            borderColor: '#000',
-          }}
-        >
+        </HeroLink>
+        <HeroLink as={NextLink} href="/test" variant="primary">
           FOR LOCAL BUSINESSES
-        </Button>
+        </HeroLink>
       </Flex>
     </VStack>
   );

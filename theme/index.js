@@ -1,6 +1,7 @@
 import { extendTheme } from '@chakra-ui/react';
 
 import Heading from './components/heading';
+import HeroLink from './components/heroLink';
 import Link from './components/link';
 import Text from './components/text';
 import colors from './foundations/colors';
@@ -15,6 +16,7 @@ const theme = extendTheme({
     Text,
     Heading,
     Link,
+    HeroLink,
   },
 });
 
