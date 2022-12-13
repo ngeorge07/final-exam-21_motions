@@ -48,7 +48,7 @@ export default function Header() {
         placement="right"
         onClose={onClose}
         finalFocusRef={btnRef}
-        size={{ sm: 'full', md: 'sm' }}
+        size={{ base: 'full', sm: 'sm' }}
         transition={{ duration: '5' }}
       >
         <DrawerOverlay />

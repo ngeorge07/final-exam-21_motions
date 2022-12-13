@@ -1,4 +1,4 @@
-import { Box, Flex, Text } from '@chakra-ui/react';
+import { Box, Flex, Heading, Link, Text, VStack } from '@chakra-ui/react';
 
 import HeroVideo from '../components/cards/HeroVideo';
 import TeamMember from '../components/cards/TeamMember';
@@ -13,23 +13,75 @@ export default function Home() {
       <main>
         <HeroVideo />
 
-        <Box mx={100}>
-          <Text fontSize="22px" mt={'14'}>
-            21motions is a networking platform developed for content creators
-            and local businesses based in Copenhagen and surroundings.
-          </Text>
+        <Box
+          as="section"
+          ml={{ base: 30 }}
+          mr={{ base: 22 }}
+          mx={{ sm: 70, md: 100, lg: 200 }}
+          my={20}
+        >
+          <Heading as="h2" variant="h2">
+            Who we are?
+          </Heading>
 
-          <Text variant={'body-paragraph'} my={'14'}>
-            Our startup`s mission is to support local talent, and at the same
-            time offer to Copenhagen-based businesses fresh, creative digital
-            content with a local vibe, tailor-made to their real audiences.
-          </Text>
+          <VStack
+            gap={{ base: 5, md: 10 }}
+            alignItems={{ base: 'flex-start', md: 'center' }}
+          >
+            <Text variant={'body-paragraph'}>
+              We are a growing community of creatives based in Copenhagen, with
+              the passion for capturing the stories of local businesses.
+            </Text>
 
-          <Text fontSize="22px" my={'14'}>
-            Join the platform as an early bird and get free access to services
-            like profile listing, professional matchmaking and production
-            booking!
-          </Text>
+            <Text variant={'body-paragraph'}>
+              Our mission is to facilitate the creation of professional video
+              content through collaborations and support local talent.
+            </Text>
+
+            <Text variant={'body-paragraph'}>
+              21motions.dk serves as a matchmaking platform with profiles of
+              content creators and businesses based in Denmark.
+            </Text>
+
+            <Text variant={'body-paragraph'}>
+              Join the community today and get access to our free services!
+            </Text>
+          </VStack>
+        </Box>
+
+        <Box
+          as="section"
+          ml={{ base: 30 }}
+          mr={{ base: 22 }}
+          mx={{ sm: 70, md: 100, lg: 200 }}
+          my={20}
+        >
+          <Heading as="h2" variant="h2">
+            Get in touch
+          </Heading>
+
+          <VStack
+            gap={{ base: 5, md: 10 }}
+            alignItems={{ base: 'flex-start', md: 'center' }}
+          >
+            <Text variant={'body-paragraph'}>
+              Meet the team behind 21motions! Connected by passion, dedication
+              and growth mindset. Let&apos;s have a chat and create an impact
+              together!
+            </Text>
+
+            <Text variant={'body-paragraph'}>
+              Join us today! Say{' '}
+              <Link
+                variant="inline-link"
+                href="mailto: hello@21motions.com"
+                isExternal
+              >
+                hello@21motions.com
+              </Link>{' '}
+              👋
+            </Text>
+          </VStack>
         </Box>
 
         <Flex
