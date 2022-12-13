@@ -5,7 +5,7 @@ import "@fontsource/mohave/700.css";
 
 import { ChakraProvider } from '@chakra-ui/react';
 import '../styles/globals.css';
-import theme from '../theme';
+import theme from "../theme/index";
 
 function MyApp({ Component, pageProps }) {
   return (
