@@ -21,7 +21,10 @@ export default function Footer() {
       mx={{ sm: 70, md: 100, lg: 200 }}
     >
       <Text fontSize="22px" align="center" mt={'24'}>
-        Not ready yet? Follow our journey on Social Media:
+        Not ready yet?{' '}
+        <Box as="span" display="inline-block">
+          Follow our journey on Social Media:
+        </Box>
       </Text>
 
       <HStack justifyContent="center" gap={4} mt={3} mb={14} flexWrap="wrap">

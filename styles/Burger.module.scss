@@ -43,6 +43,6 @@
 }
 
 .open .line_menu {
-  background-color: #000;
+  background-color: var(--chakra-colors-portland_orange);
   transition: background-color 500ms ease;
 }

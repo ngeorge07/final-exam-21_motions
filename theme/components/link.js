@@ -19,7 +19,7 @@ const Link = {
       },
       _after: {
         content: `""`,
-        mt: -2,
+        mt: { base: -1, md: -1.5 },
         display: 'block',
         width: 0,
         height: 0.5,

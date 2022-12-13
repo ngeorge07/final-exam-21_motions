@@ -71,34 +71,35 @@ export default function Home() {
             </Text>
 
             <Text variant={'body-paragraph'}>
-              Join us today! Say{' '}
-              <Link
-                variant="inline-link"
-                href="mailto: hello@21motions.com"
-                isExternal
-              >
-                hello@21motions.com
-              </Link>{' '}
-              👋
+              Join us today!{' '}
+              <Box as="span" display="inline-block">
+                Say{' '}
+                <Link
+                  variant="inline-link"
+                  href="mailto: hello@21motions.com"
+                  isExternal
+                >
+                  hello@21motions.com
+                </Link>{' '}
+                👋
+              </Box>
             </Text>
           </VStack>
 
           <Flex
-          mt={{base: 16, md: 20}}
-          gap={{base: 10, md: 5}}
-          alignItems="center"
-          justifyContent="space-between"
-          flexDirection={{base: "column", md:"row"}}
-          maxW={{md: "600px"}}
-          mx={{md: "auto"}}
-        >
-          <TeamMember name="ERZSÉBET BÁLINT" title="UX & Content" />
-          <TeamMember name="GEORGE NICOLAE" title="Frontend Developer" />
-          <TeamMember name="JENS STANEK" title="Super Coach" />
-        </Flex>
+            mt={{ base: 16, md: 20 }}
+            gap={{ base: 10, md: 5 }}
+            alignItems="center"
+            justifyContent="space-between"
+            flexDirection={{ base: 'column', md: 'row' }}
+            maxW={{ md: '600px' }}
+            mx={{ md: 'auto' }}
+          >
+            <TeamMember name="ERZSÉBET BÁLINT" title="UX & Content" />
+            <TeamMember name="GEORGE NICOLAE" title="Frontend Developer" />
+            <TeamMember name="JENS STANEK" title="Super Coach" />
+          </Flex>
         </Box>
-
-        
       </main>
 
       <Footer />
