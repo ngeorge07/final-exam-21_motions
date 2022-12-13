@@ -25,9 +25,9 @@ export default function PropositionCard() {
           variant="solid"
           color="#fff"
           w={['75%', '100%']}
-          bgColor="green_grass.100"
+          bgColor="green_grass"
           _hover={{
-            backgroundColor: 'green_grass.100',
+            backgroundColor: 'green_grass',
             borderWidth: '2px',
             borderColor: '#fff',
           }}
