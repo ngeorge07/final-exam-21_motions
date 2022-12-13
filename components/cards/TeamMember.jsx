@@ -2,9 +2,9 @@ import { Avatar, Flex, Heading, Text } from '@chakra-ui/react';
 
 export default function TeamMember({ name, title }) {
   return (
-    <Flex align="center" direction="column">
+    <Flex align="center" direction="column" textAlign="center">
       <Avatar
-        size="2xl"
+        size={{ base: 'xl', sm: '2xl' }}
         name={name}
         src={`/home/${name.split(' ')[0]}-portrait.webp`}
       />

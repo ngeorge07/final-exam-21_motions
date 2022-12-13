@@ -8,22 +8,27 @@ import {
   IoLogoYoutube,
 } from 'react-icons/io5';
 
-import { HStack, Icon, Text, useColorModeValue } from '@chakra-ui/react';
+import { Box, HStack, Icon, Text, useColorModeValue } from '@chakra-ui/react';
 
 export default function Footer() {
   const iconColor = useColorModeValue('#000', '#FFF');
 
   return (
-    <footer>
+    <Box
+      as="footer"
+      ml={{ base: 30 }}
+      mr={{ base: 22 }}
+      mx={{ sm: 70, md: 100, lg: 200 }}
+    >
       <Text fontSize="22px" align="center" mt={'24'}>
         Not ready yet? Follow our journey on Social Media:
       </Text>
 
-      <HStack justifyContent="center" gap={4} mt={3} mb={14}>
+      <HStack justifyContent="center" gap={4} mt={3} mb={14} flexWrap="wrap">
         <Link href="#">
           <Icon
             color={iconColor}
-            _hover={{ color: '#4DB33B' }}
+            _hover={{ color: 'american_green' }}
             boxSize={7}
             as={IoLogoLinkedin}
           />
@@ -31,7 +36,7 @@ export default function Footer() {
         <Link href="#">
           <Icon
             color={iconColor}
-            _hover={{ color: '#4DB33B' }}
+            _hover={{ color: 'american_green' }}
             boxSize={7}
             as={IoLogoFacebook}
           />
@@ -39,7 +44,7 @@ export default function Footer() {
         <Link href="#">
           <Icon
             color={iconColor}
-            _hover={{ color: '#4DB33B' }}
+            _hover={{ color: 'american_green' }}
             boxSize={7}
             as={IoLogoYoutube}
           />
@@ -47,7 +52,7 @@ export default function Footer() {
         <Link href="#">
           <Icon
             color={iconColor}
-            _hover={{ color: '#4DB33B' }}
+            _hover={{ color: 'american_green' }}
             boxSize={7}
             as={IoLogoInstagram}
           />
@@ -55,12 +60,12 @@ export default function Footer() {
         <Link href="#">
           <Icon
             color={iconColor}
-            _hover={{ color: '#4DB33B' }}
+            _hover={{ color: 'american_green' }}
             boxSize={7}
             as={IoLogoTiktok}
           />
         </Link>
       </HStack>
-    </footer>
+    </Box>
   );
 }

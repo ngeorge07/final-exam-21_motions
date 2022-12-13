@@ -82,19 +82,23 @@ export default function Home() {
               👋
             </Text>
           </VStack>
-        </Box>
 
-        <Flex
-          gap={4}
+          <Flex
+          mt={{base: 16, md: 20}}
+          gap={{base: 10, md: 5}}
           alignItems="center"
-          w="100%"
-          justifyContent="space-evenly"
-          mx="auto"
+          justifyContent="space-between"
+          flexDirection={{base: "column", md:"row"}}
+          maxW={{md: "600px"}}
+          mx={{md: "auto"}}
         >
           <TeamMember name="ERZSÉBET BÁLINT" title="UX & Content" />
           <TeamMember name="GEORGE NICOLAE" title="Frontend Developer" />
           <TeamMember name="JENS STANEK" title="Super Coach" />
         </Flex>
+        </Box>
+
+        
       </main>
 
       <Footer />

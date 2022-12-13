@@ -19,6 +19,7 @@ const Link = {
       },
       _after: {
         content: `""`,
+        mt: -2,
         display: 'block',
         width: 0,
         height: 0.5,
