@@ -12,6 +12,12 @@ const Heading = {
       fontWeight: 'semibold',
       mb: { base: 2.5, md: 5 },
     },
+
+    'review-heading': {
+      fontSize: 18,
+      fontFamily: `'Roboto', sans-serif`,
+      fontWeight: 'semibold',
+    },
   },
 };
 

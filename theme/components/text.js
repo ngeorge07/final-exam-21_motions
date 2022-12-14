@@ -5,6 +5,10 @@ const Text = {
       textAlign: {base: "left", md: 'center' },
       maxW: { md: 600 },
     },
+
+    "review-paragraph": {
+      fontFamily: `'Roboto', sans-serif`,
+    }
   },
 };
 

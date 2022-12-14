@@ -1,6 +1,7 @@
 import { Link, Text } from '@chakra-ui/react';
 import NextLink from 'next/link';
 import HeroImage from '../components/cards/HeroImage';
+import CarouselContainer from '../components/CarouselContainer';
 import HeroLink from '../components/HeroLink';
 import Footer from '../components/navigation/Footer';
 import Header from '../components/navigation/Header';
@@ -48,6 +49,8 @@ export default function business() {
             Start here
           </HeroLink>
         </MainSection>
+
+        <CarouselContainer />
 
         <MainSection sectionHeading="Share your ideas">
           <Text variant={'body-paragraph'}>

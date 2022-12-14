@@ -2,6 +2,9 @@ import "@fontsource/mohave/400.css";
 import "@fontsource/mohave/500.css";
 import "@fontsource/mohave/600.css";
 import "@fontsource/mohave/700.css";
+import "@fontsource/roboto-slab/400.css";
+import "@fontsource/roboto-slab/600.css";
+
 
 import { ChakraProvider } from '@chakra-ui/react';
 import '../styles/globals.css';
