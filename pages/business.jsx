@@ -50,8 +50,6 @@ export default function business() {
           </HeroLink>
         </MainSection>
 
-        <CarouselContainer />
-
         <MainSection sectionHeading="Share your ideas">
           <Text variant={'body-paragraph'}>
             Contribute to the creative community&apos;s growth by{' '}
@@ -74,6 +72,8 @@ export default function business() {
             👋
           </Text>
         </MainSection>
+
+        <CarouselContainer />
       </main>
 
       <Footer />

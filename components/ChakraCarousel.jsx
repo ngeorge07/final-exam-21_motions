@@ -1,6 +1,12 @@
 //TODO: Properly handle user tabbing
 
-import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import React, {
+  useCallback,
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+} from 'react';
 
 import {
   Box,
@@ -15,8 +21,7 @@ import {
 
 import { motion, useAnimation, useMotionValue } from 'framer-motion';
 import { IoArrowBackSharp, IoArrowForwardSharp } from 'react-icons/io5';
-import useBoundingRect from '../hooks/useBoundingRect';
-
+import { useBoundingRect } from '../hooks/';
 const MotionFlex = motion(Flex);
 
 const transitionProps = {
@@ -64,6 +69,11 @@ const ChakraCarousel = ({ children, gap }) => {
       setConstraint(1);
     }
     if (isBetweenMdAndXl) {
+      setItemWidth(sliderWidth / 2 - gap);
+      setMultiplier(0.5);
+      setConstraint(2);
+    }
+    if (isGreaterThanXL) {
       setItemWidth(sliderWidth / 2 - gap);
       setMultiplier(0.5);
       setConstraint(2);
@@ -249,6 +259,7 @@ const Track = ({
   const handleDragStart = () => setDragStartPosition(positions[activeItem]);
 
   const handleDragEnd = (_, info) => {
+    console.log(info);
     const distance = info.offset.x;
     const velocity = info.velocity.x * multiplier;
     const direction = velocity < 0 || distance < 0 ? 1 : -1;
@@ -398,6 +409,7 @@ const Item = ({
       _notLast={{
         mr: `${gap}px`,
       }}
+      py="4px"
     >
       {children}
     </Flex>
