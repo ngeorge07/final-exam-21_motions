@@ -3,6 +3,7 @@ import HeroVideo from '../components/cards/HeroVideo';
 import TeamWrapper from '../components/cards/TeamWrapper';
 import Footer from '../components/navigation/Footer';
 import Header from '../components/navigation/Header';
+import Touch from "../components/SVGs/Touch";
 import MainSection from '../components/templates/MainSection';
 
 export default function Home() {
@@ -34,7 +35,7 @@ export default function Home() {
           </Text>
         </MainSection>
 
-        <MainSection sectionHeading="Get in touch">
+        <MainSection sectionHeading="Get in touch" icon={Touch}>
           <Text variant={'body-paragraph'}>
             Meet the team behind 21motions! Connected by passion, dedication and
             growth mindset. Let&apos;s have a chat and create an impact

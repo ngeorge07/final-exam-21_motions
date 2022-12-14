@@ -4,7 +4,7 @@ import HeroLink from '../HeroLink';
 
 export default function PropositionCard({ text, linkText, isHome }) {
   return (
-    <VStack w="fit-content" zIndex={2} mt={20}>
+    <VStack w="fit-content" zIndex={2} mt={isHome ? 20 : 40}>
       <Heading as="h1" variant="h1">
         {text}
       </Heading>

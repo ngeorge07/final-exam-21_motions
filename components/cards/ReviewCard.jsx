@@ -74,7 +74,9 @@ export default function ReviewCard({ post, index }) {
             <Image
               boxSize="100px"
               objectFit="cover"
-              src={`https://api.lorem.space/image/shoes?w=150&h=15${index}`}
+              src={`https://api.lorem.space/image/shoes?w=150&h=15${
+                index <= 9 ? index : '3'
+              }`}
               alt="Chakra UI"
             />
           </GridItem>
@@ -82,7 +84,9 @@ export default function ReviewCard({ post, index }) {
             <Image
               boxSize="100px"
               objectFit="cover"
-              src={`https://api.lorem.space/image/shoes?w=150&h=15${index + 3}`}
+              src={`https://api.lorem.space/image/shoes?w=150&h=15${
+                index <= 6 ? index + 3 : '6'
+              }`}
               alt="Chakra UI"
             />
           </GridItem>
@@ -90,7 +94,9 @@ export default function ReviewCard({ post, index }) {
             <Image
               boxSize="100px"
               objectFit="cover"
-              src={`https://api.lorem.space/image/shoes?w=150&h=15${index + 6}`}
+              src={`https://api.lorem.space/image/shoes?w=150&h=15${
+                index <= 3 ? index + 6 : '9'
+              }`}
               alt="Chakra UI"
             />
           </GridItem>

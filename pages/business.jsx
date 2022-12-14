@@ -1,10 +1,11 @@
-import { Link, Text } from '@chakra-ui/react';
+import { Heading, Link, Text } from '@chakra-ui/react';
 import NextLink from 'next/link';
 import HeroImage from '../components/cards/HeroImage';
 import CarouselContainer from '../components/CarouselContainer';
 import HeroLink from '../components/HeroLink';
 import Footer from '../components/navigation/Footer';
 import Header from '../components/navigation/Header';
+import Worm from '../components/SVGs/Worm';
 import MainSection from '../components/templates/MainSection';
 
 export default function creator() {
@@ -49,22 +50,30 @@ export default function creator() {
             alignSelf="center"
             maxW={{ base: '300px', md: '280px' }}
           >
-            Start here
+            Get started here
           </HeroLink>
         </MainSection>
 
-        <MainSection sectionHeading="Hear from business members">
-          <CarouselContainer />
-        </MainSection>
+        <Heading
+          as="h2"
+          variant="h2"
+          ml={{ base: 30 }}
+          mr={{ base: 22 }}
+          mx={{ sm: 70, md: 100, lg: 200 }}
+          justifyContent={{ base: 'flex-start', md: 'center' }}
+        >
+          Hear from business members
+        </Heading>
+        <CarouselContainer />
 
-        <MainSection sectionHeading="Share your ideas">
+        <MainSection sectionHeading="Learn more" icon={Worm}>
           <Text variant={'body-paragraph'}>
-            Contribute to the creative community&apos;s growth by{' '}
+            Do you find the concept interesting but not sure if it could work
+            for you? Read more about{' '}
             <Link variant="inline-link" href="#">
-              sharing your experience
+              our core values here
             </Link>{' '}
-            and perspective! We&apos;re open to suggestions and looking forward
-            to having a chat with you!
+            or book an appointment with us. Looking forward to hearing from you!
           </Text>
 
           <Text variant={'body-paragraph'}>

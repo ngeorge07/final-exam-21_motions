@@ -1,10 +1,11 @@
-import { Link, Text } from '@chakra-ui/react';
+import { Heading, Link, Text } from '@chakra-ui/react';
 import NextLink from 'next/link';
 import HeroImage from '../components/cards/HeroImage';
 import CarouselContainer from '../components/CarouselContainer';
 import HeroLink from '../components/HeroLink';
 import Footer from '../components/navigation/Footer';
 import Header from '../components/navigation/Header';
+import About from '../components/SVGs/About';
 import MainSection from '../components/templates/MainSection';
 
 export default function business() {
@@ -53,9 +54,19 @@ export default function business() {
           </HeroLink>
         </MainSection>
 
+        <Heading
+          as="h2"
+          variant="h2"
+          ml={{ base: 30 }}
+          mr={{ base: 22 }}
+          mx={{ sm: 70, md: 100, lg: 200 }}
+          justifyContent={{ base: 'flex-start', md: 'center' }}
+        >
+          Meet your future peers
+        </Heading>
         <CarouselContainer creator={true} />
 
-        <MainSection sectionHeading="Share your ideas">
+        <MainSection sectionHeading="Share your ideas" icon={About}>
           <Text variant={'body-paragraph'}>
             Contribute to the creative community&apos;s growth by{' '}
             <Link variant="inline-link" href="#">

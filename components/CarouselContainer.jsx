@@ -48,7 +48,8 @@ export default function CarouselContainer({ creator }) {
 
   return (
     <Container
-      py={8}
+      pt={3}
+      pb={8}
       px={0}
       maxW={{
         base: '100%',
