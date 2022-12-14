@@ -7,10 +7,12 @@ import {
   DrawerOverlay,
   Flex,
   IconButton,
-  Text,
+  Link,
   useColorMode,
+  useColorModeValue,
   useDisclosure,
 } from '@chakra-ui/react';
+import NextLink from 'next/link';
 import { useRef } from 'react';
 import IconHamburger from '../SVGs/IconHamburger';
 import Logo from '../SVGs/Logo';
@@ -53,12 +55,23 @@ export default function Header() {
       >
         <DrawerOverlay />
 
-        <DrawerContent alignItems="center">
-          <DrawerBody mt={120}>
-            <Text>ABOUT US</Text>
-            <Text>CONTENT CREATORS</Text>
-            <Text>LOCAL BUSINESSES</Text>
-            <Text>CONTACT</Text>
+        <DrawerContent
+          alignItems="center"
+          backgroundColor={useColorModeValue('white', 'raisin_black')}
+        >
+          <DrawerBody mt={120} display="flex" flexDirection="column" gap={5}>
+            <Link as={NextLink} href="/test" variant="menu-link">
+              ABOUT US
+            </Link>
+            <Link as={NextLink} href="/test" variant="menu-link">
+              CONTENT CREATORS
+            </Link>
+            <Link as={NextLink} href="/test" variant="menu-link">
+              LOCAL BUSINESSES
+            </Link>
+            <Link as={NextLink} href="/test" variant="menu-link">
+              ABOUT US
+            </Link>
 
             <Button onClick={toggleColorMode} colorScheme="blackAlpha">
               Change to {colorMode === 'light' ? 'dark' : 'light'}

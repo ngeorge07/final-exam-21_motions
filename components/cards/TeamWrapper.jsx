@@ -7,15 +7,14 @@ import TeamMember from './TeamMember';
 const variants = {
   visible: {
     opacity: 1,
-    scale: 1,
     transition: { duration: 0.2, staggerChildren: 0.3, delayChildren: 0.2 },
   },
-  hidden: { opacity: 0, scale: 0.9 },
+  hidden: { opacity: 0 },
 };
 
 export default function TeamWrapper() {
   const controls = useAnimation();
-  const [ref, inView] = useInView({ rootMargin: '-30px 0px' });
+  const [ref, inView] = useInView({ rootMargin: '-10px 0px' });
 
   useEffect(() => {
     if (inView) {
@@ -32,7 +31,6 @@ export default function TeamWrapper() {
       variants={variants}
       mt={{ base: 16, md: 20 }}
       gap={{ base: 10, md: 5 }}
-      alignItems="center"
       justifyContent="space-between"
       flexDirection={{ base: 'column', md: 'row' }}
       maxW={{ md: '600px' }}
