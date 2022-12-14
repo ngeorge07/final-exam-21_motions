@@ -1,8 +1,23 @@
 import { Avatar, Flex, Heading, Text } from '@chakra-ui/react';
+import { motion } from 'framer-motion';
+
+const variants = {
+  visible: {
+    y: 0,
+    opacity: 1,
+  },
+  hidden: { y: 50, opacity: 0 },
+};
 
 export default function TeamMember({ name, title }) {
   return (
-    <Flex align="center" direction="column" textAlign="center">
+    <Flex
+      as={motion.div}
+      variants={variants}
+      align="center"
+      direction="column"
+      textAlign="center"
+    >
       <Avatar
         size={{ base: 'xl', sm: '2xl' }}
         name={name}

@@ -1,9 +1,9 @@
-import { Box, Flex, Heading, Link, Text, VStack } from '@chakra-ui/react';
-
+import { Box, Heading, Link, Text, VStack } from '@chakra-ui/react';
 import HeroVideo from '../components/cards/HeroVideo';
-import TeamMember from '../components/cards/TeamMember';
+import TeamWrapper from '../components/cards/TeamWrapper';
 import Footer from '../components/navigation/Footer';
 import Header from '../components/navigation/Header';
+import MainSection from '../components/templates/MainSection';
 
 export default function Home() {
   return (
@@ -13,13 +13,7 @@ export default function Home() {
       <main>
         <HeroVideo />
 
-        <Box
-          as="section"
-          ml={{ base: 30 }}
-          mr={{ base: 22 }}
-          mx={{ sm: 70, md: 100, lg: 200 }}
-          my={20}
-        >
+        <MainSection>
           <Heading as="h2" variant="h2">
             Who we are?
           </Heading>
@@ -47,15 +41,9 @@ export default function Home() {
               Join the community today and get access to our free services!
             </Text>
           </VStack>
-        </Box>
+        </MainSection>
 
-        <Box
-          as="section"
-          ml={{ base: 30 }}
-          mr={{ base: 22 }}
-          mx={{ sm: 70, md: 100, lg: 200 }}
-          my={20}
-        >
+        <MainSection>
           <Heading as="h2" variant="h2">
             Get in touch
           </Heading>
@@ -85,21 +73,11 @@ export default function Home() {
               </Box>
             </Text>
           </VStack>
+        </MainSection>
 
-          <Flex
-            mt={{ base: 16, md: 20 }}
-            gap={{ base: 10, md: 5 }}
-            alignItems="center"
-            justifyContent="space-between"
-            flexDirection={{ base: 'column', md: 'row' }}
-            maxW={{ md: '600px' }}
-            mx={{ md: 'auto' }}
-          >
-            <TeamMember name="ERZSÉBET BÁLINT" title="UX & Content" />
-            <TeamMember name="GEORGE NICOLAE" title="Frontend Developer" />
-            <TeamMember name="JENS STANEK" title="Super Coach" />
-          </Flex>
-        </Box>
+        <MainSection>
+          <TeamWrapper />
+        </MainSection>
       </main>
 
       <Footer />
