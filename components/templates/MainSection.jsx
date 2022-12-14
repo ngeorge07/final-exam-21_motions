@@ -1,4 +1,4 @@
-import { Box } from '@chakra-ui/react';
+import { Box, Heading, VStack } from '@chakra-ui/react';
 import { motion, useAnimation } from 'framer-motion';
 import { useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
@@ -13,7 +13,7 @@ const variants = {
   hidden: { y: 80, opacity: 0, scale: 0.9 },
 };
 
-export default function MainSection({ children }) {
+export default function MainSection({ sectionHeading, children }) {
   const controls = useAnimation();
   const [ref, inView] = useInView({ rootMargin: '-60px 0px' });
 
@@ -35,7 +35,16 @@ export default function MainSection({ children }) {
       mx={{ sm: 70, md: 100, lg: 200 }}
       my={20}
     >
-      {children}
+      <Heading as="h2" variant="h2">
+        {sectionHeading}
+      </Heading>
+
+      <VStack
+        gap={{ base: 5, md: 10 }}
+        alignItems={{ base: 'flex-start', md: 'center' }}
+      >
+        {children}
+      </VStack>
     </Box>
   );
 }
