@@ -21,7 +21,7 @@ export default function TeamMember({ name, title }) {
       <Avatar
         size={{ base: 'xl', sm: '2xl' }}
         name={name}
-        src={`./home/${name.split(' ')[0]}-portrait.webp`}
+        src={`/home/${name.split(' ')[0]}-portrait.webp`}
       />
       <Heading mt={5} mb={2} fontSize={22} size="md" fontWeight={500}>
         {name}

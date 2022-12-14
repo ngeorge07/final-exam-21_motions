@@ -36,8 +36,8 @@ export default function TeamWrapper() {
       maxW={{ md: '600px' }}
       mx={{ md: 'auto' }}
     >
-      <TeamMember name="ERZSÉBET BÁLINT" title="UX & Content" />
       <TeamMember name="GEORGE NICOLAE" title="Frontend Developer" />
+      <TeamMember name="ERZSÉBET BÁLINT" title="UX & Content" />
       <TeamMember name="JENS STANEK" title="Super Coach" />
     </Flex>
   );
