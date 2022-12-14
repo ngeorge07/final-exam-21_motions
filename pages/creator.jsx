@@ -15,6 +15,7 @@ export default function business() {
 
       <main>
         <HeroImage
+          img="creator"
           text="CREATE VIDEO CONTENT FOR LOCAL BUSINESSES"
           linkText="Submit your application"
         />

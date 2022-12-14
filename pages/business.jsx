@@ -15,6 +15,7 @@ export default function creator() {
 
       <main>
         <HeroImage
+          img="business"
           text="CONNECT WITH THE BEST MATCHING VIDEO CREATORS"
           linkText="Start a collaboration"
         />

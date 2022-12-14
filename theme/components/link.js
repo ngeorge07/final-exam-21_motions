@@ -36,7 +36,7 @@ const Link = {
     }),
 
     'menu-link': (props) => ({
-      fontSize: 22,
+      fontSize: 24,
       fontWeight: 'semibold',
       width: 'fit-content',
       _hover: {

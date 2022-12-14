@@ -14,7 +14,7 @@ export default function Home() {
       <main>
         <HeroVideo />
 
-        <MainSection sectionHeading="Who are we?">
+        <MainSection id="introduction" sectionHeading="Who we are?">
           <Text variant={'body-paragraph'}>
             We are a growing community of creatives based in Copenhagen, with
             the passion for capturing the stories of local businesses.
@@ -35,7 +35,7 @@ export default function Home() {
           </Text>
         </MainSection>
 
-        <MainSection sectionHeading="Get in touch" icon={Touch}>
+        <MainSection id="contact" sectionHeading="Get in touch" icon={Touch}>
           <Text variant={'body-paragraph'}>
             Meet the team behind 21motions! Connected by passion, dedication and
             growth mindset. Let&apos;s have a chat and create an impact

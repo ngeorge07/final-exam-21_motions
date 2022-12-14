@@ -5,7 +5,7 @@ import HeroLink from '../HeroLink';
 export default function PropositionCard({ text, linkText, isHome }) {
   return (
     <VStack w="fit-content" zIndex={2} mt={isHome ? 20 : 40}>
-      <Heading as="h1" variant="h1">
+      <Heading as="h1" variant="h1" textShadow="rgb(0, 0, 0.5) 2px 2px">
         {text}
       </Heading>
 
@@ -18,14 +18,14 @@ export default function PropositionCard({ text, linkText, isHome }) {
         gap="5"
       >
         {isHome && (
-          <HeroLink as={NextLink} href="/" variant="secondary">
+          <HeroLink as={NextLink} href="/creator" variant="secondary">
             Video creators
           </HeroLink>
         )}
 
         <HeroLink
           as={NextLink}
-          href="/business"
+          href={isHome ? '/business' : '#'}
           variant="primary"
           w={
             isHome

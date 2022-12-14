@@ -14,6 +14,7 @@ import {
 } from '@chakra-ui/react';
 import NextLink from 'next/link';
 import { useRef } from 'react';
+import { IoMoon, IoSunny } from 'react-icons/io5';
 import IconHamburger from '../SVGs/IconHamburger';
 import Logo from '../SVGs/Logo';
 
@@ -33,7 +34,9 @@ export default function Header() {
       justifyContent="space-between"
       alignItems="center"
     >
-      <Logo />
+      <Link as={NextLink} href="/">
+        <Logo />
+      </Link>
 
       <Box
         ref={btnRef}
@@ -59,22 +62,40 @@ export default function Header() {
           alignItems="center"
           backgroundColor={useColorModeValue('white', 'raisin_black')}
         >
-          <DrawerBody mt={120} display="flex" flexDirection="column" gap={5}>
+          <DrawerBody
+            mt={120}
+            display="flex"
+            flexDirection="column"
+            alignItems="center"
+            gap={5}
+          >
             <Link as={NextLink} href="/" variant="menu-link">
-              Who we are?
+              Home
             </Link>
-            <Link as={NextLink} href="/" variant="menu-link">
-              CONTENT CREATORS
+            <Link as={NextLink} href="/creator" variant="menu-link">
+              Video creators
             </Link>
             <Link as={NextLink} href="/business" variant="menu-link">
-              LOCAL BUSINESSES
-            </Link>
-            <Link as={NextLink} href="/" variant="menu-link">
-              ABOUT US
+              For businesses
             </Link>
 
-            <Button onClick={toggleColorMode} colorScheme="blackAlpha">
-              Change to {colorMode === 'light' ? 'dark' : 'light'}
+            <Button
+              onClick={toggleColorMode}
+              variant="outline"
+              border="none"
+              outlineColor={useColorModeValue('black', 'white')}
+              _hover={{
+                backgroundColor: useColorModeValue(
+                  'gray.200',
+                  'blackAlpha.400'
+                ),
+              }}
+              _active={{ backgroundColor: 'none' }}
+              fontSize={18}
+              mt={5}
+              rightIcon={colorMode === 'light' ? <IoMoon /> : <IoSunny />}
+            >
+              {colorMode === 'light' ? 'Dark' : 'Light'} Mode
             </Button>
           </DrawerBody>
         </DrawerContent>

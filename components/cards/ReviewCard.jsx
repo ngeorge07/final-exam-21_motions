@@ -58,6 +58,7 @@ export default function ReviewCard({ post, index }) {
                 ? post.profileImage
                 : 'https://bit.ly/sage-adebayo'
             }
+            boxShadow="rgba(0, 0, 0, 0.3) 2px 2.4px 2px"
           />
         </Flex>
       </CardHeader>

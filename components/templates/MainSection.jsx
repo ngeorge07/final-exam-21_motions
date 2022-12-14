@@ -13,7 +13,7 @@ const variants = {
   hidden: { y: 80, opacity: 0, scale: 0.9 },
 };
 
-export default function MainSection({ sectionHeading, children, icon }) {
+export default function MainSection({ sectionHeading, children, icon, id }) {
   const controls = useAnimation();
   const [ref, inView] = useInView({ rootMargin: '-60px 0px' });
 
@@ -35,6 +35,7 @@ export default function MainSection({ sectionHeading, children, icon }) {
       mx={{ sm: 70, md: 100, lg: 200 }}
       my={20}
       alignItems={{ base: 'flex-start', md: 'center' }}
+      id={id}
     >
       <Heading as="h2" variant="h2">
         {sectionHeading} {icon && <Icon as={icon} display="inline-block" />}
