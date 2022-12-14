@@ -61,7 +61,7 @@ export default function Header() {
         >
           <DrawerBody mt={120} display="flex" flexDirection="column" gap={5}>
             <Link as={NextLink} href="/" variant="menu-link">
-              ABOUT US
+              Who we are?
             </Link>
             <Link as={NextLink} href="/" variant="menu-link">
               CONTENT CREATORS
