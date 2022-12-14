@@ -60,16 +60,16 @@ export default function Header() {
           backgroundColor={useColorModeValue('white', 'raisin_black')}
         >
           <DrawerBody mt={120} display="flex" flexDirection="column" gap={5}>
-            <Link as={NextLink} href="/test" variant="menu-link">
+            <Link as={NextLink} href="/" variant="menu-link">
               ABOUT US
             </Link>
-            <Link as={NextLink} href="/test" variant="menu-link">
+            <Link as={NextLink} href="/" variant="menu-link">
               CONTENT CREATORS
             </Link>
-            <Link as={NextLink} href="/test" variant="menu-link">
+            <Link as={NextLink} href="/business" variant="menu-link">
               LOCAL BUSINESSES
             </Link>
-            <Link as={NextLink} href="/test" variant="menu-link">
+            <Link as={NextLink} href="/" variant="menu-link">
               ABOUT US
             </Link>
 
