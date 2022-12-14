@@ -21,6 +21,7 @@ const HeroLink = {
       color: 'black',
       backgroundColor: 'white',
       borderWidth: 2,
+      borderColor: "white",
       _hover: {
         borderWidth: 2,
         borderColor: 'may_green',
