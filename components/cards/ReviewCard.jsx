@@ -64,7 +64,7 @@ export default function ReviewCard({ post }) {
         <Text variant="review-paragraph">{post.body}</Text>
 
         <Grid templateColumns="repeat(3, 1fr)" gap={6} mt={10}>
-          <GridItem>
+          <GridItem justifySelf="center">
             <Image
               boxSize="100px"
               objectFit="cover"
@@ -72,7 +72,7 @@ export default function ReviewCard({ post }) {
               alt="Chakra UI"
             />
           </GridItem>
-          <GridItem>
+          <GridItem justifySelf="center">
             <Image
               boxSize="100px"
               objectFit="cover"
@@ -80,7 +80,7 @@ export default function ReviewCard({ post }) {
               alt="Chakra UI"
             />
           </GridItem>
-          <GridItem>
+          <GridItem justifySelf="center">
             <Image
               boxSize="100px"
               objectFit="cover"

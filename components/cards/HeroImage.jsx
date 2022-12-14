@@ -1,7 +1,7 @@
 import { Grid, GridItem, Image } from '@chakra-ui/react';
 import PropositionCard from './PropositionCard';
 
-export default function HeroImage() {
+export default function HeroImage({ text, linkText }) {
   return (
     <Grid as="section" display="grid">
       <GridItem colStart={1} colEnd={2} rowStart={1} rowEnd={2}>
@@ -23,10 +23,7 @@ export default function HeroImage() {
         alignSelf="center"
         justifySelf="center"
       >
-        <PropositionCard
-          text="CREATE VIDEO CONTENT FOR LOCAL BUSINESSES"
-          linkText="Submit your application"
-        />
+        <PropositionCard text={text} linkText={linkText} />
       </GridItem>
     </Grid>
   );

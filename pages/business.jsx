@@ -7,37 +7,40 @@ import Footer from '../components/navigation/Footer';
 import Header from '../components/navigation/Header';
 import MainSection from '../components/templates/MainSection';
 
-export default function business() {
+export default function creator() {
   return (
     <>
       <Header />
 
       <main>
-        <HeroImage />
+        <HeroImage
+          text="CONNECT WITH THE BEST MATCHING VIDEO CREATORS"
+          linkText="Start a collaboration"
+        />
 
-        <MainSection sectionHeading="How to get started?">
+        <MainSection sectionHeading="Do you have a story to tell?">
           <Text variant={'body-paragraph'}>
-            Whether you are an experienced professional or a new talent in video
-            production, being part of 21motions helps you to showcase your work,
-            meet peers, businesses and get purposeful job opportunities.
+            We are supporting your company with tailor-made video content
+            optimized for your marketing channels. Being a business member of
+            21motions, you can onboard multiple creative heads for your project
+            while we take care of both the quality as the in-time delivery.
           </Text>
 
           <Text variant={'body-paragraph'}>
-            You can submit your application for a free membership by adding your
-            areas of interests, experience and goals you want to achieve in your
-            professional career path.
+            Try out the new way of content creation and engage better with your
+            customers! Here you can find the best matching creatives based in
+            Copenhagen.
           </Text>
 
           <Text variant={'body-paragraph'}>
-            After your application is processed, you can update your creator
-            page and match with local businesses looking for video creators to
-            tell their stories.
+            Create a company profile for free and get multiple offers for your
+            specific needs.
           </Text>
 
-          <Text variant={'body-paragraph'}>
-            Let&apos;s grow and shape Copenhagen&apos;s creative community
-            together! Start your application today and join the team!
-          </Text>
+          <video controls width="600px">
+            <source src="/business/21motions_promo.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
 
           <HeroLink
             as={NextLink}
@@ -50,7 +53,9 @@ export default function business() {
           </HeroLink>
         </MainSection>
 
-        <CarouselContainer />
+        <MainSection sectionHeading="Hear from business members">
+          <CarouselContainer />
+        </MainSection>
 
         <MainSection sectionHeading="Share your ideas">
           <Text variant={'body-paragraph'}>

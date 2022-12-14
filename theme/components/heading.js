@@ -3,7 +3,7 @@ const Heading = {
   variants: {
     h1: {
       fontSize: [37, 45, 58, 58, 58],
-      maxW: { sm: '500px' },
+      maxW: { sm: '500px', md: "590px" },
       color: '#fff',
       textAlign: ['center'],
     },
