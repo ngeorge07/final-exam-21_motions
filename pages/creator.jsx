@@ -53,7 +53,7 @@ export default function business() {
           </HeroLink>
         </MainSection>
 
-        <CarouselContainer />
+        <CarouselContainer creator={true} />
 
         <MainSection sectionHeading="Share your ideas">
           <Text variant={'body-paragraph'}>

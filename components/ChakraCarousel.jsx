@@ -11,6 +11,7 @@ import {
   useTheme,
   VStack,
 } from '@chakra-ui/react';
+import { motion, useAnimation, useMotionValue } from 'framer-motion';
 import React, {
   useCallback,
   useEffect,
@@ -18,8 +19,6 @@ import React, {
   useRef,
   useState,
 } from 'react';
-
-import { motion, useAnimation, useMotionValue } from 'framer-motion';
 import { IoArrowBackSharp, IoArrowForwardSharp } from 'react-icons/io5';
 import { useBoundingRect } from '../hooks/';
 const MotionFlex = motion(Flex);

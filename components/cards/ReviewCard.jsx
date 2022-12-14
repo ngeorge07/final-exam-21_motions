@@ -16,7 +16,7 @@ import {
 } from '@chakra-ui/react';
 import { IoCheckmarkSharp } from 'react-icons/io5';
 
-export default function ReviewCard({ post }) {
+export default function ReviewCard({ post, index }) {
   const cardBg = useColorModeValue('platinum', 'black');
   const accentTextColor = useColorModeValue('american_green', 'inchworm');
 
@@ -38,20 +38,26 @@ export default function ReviewCard({ post }) {
           justifyContent="space-between"
         >
           <Box>
-            <Heading size={{ base: 'md', lg: 'lg' }}>Segun Adebayo</Heading>
+            <Heading size={{ base: 'md', lg: 'lg' }}>
+              {post.name ? post.name : 'Segun Adebayo'}
+            </Heading>
             <Text
               variant="review-paragraph"
               fontWeight="semibold"
               color={accentTextColor}
             >
-              Creator, Chakra UI
+              {post.job ? post.job : 'Creator, Chakra UI'}
             </Text>
           </Box>
 
           <Avatar
             size="lg"
-            name="Segun Adebayo"
-            src="https://bit.ly/sage-adebayo"
+            name={post.name ? post.name : 'Segun Adebayo'}
+            src={
+              post.profileImage
+                ? post.profileImage
+                : 'https://bit.ly/sage-adebayo'
+            }
           />
         </Flex>
       </CardHeader>
@@ -68,7 +74,7 @@ export default function ReviewCard({ post }) {
             <Image
               boxSize="100px"
               objectFit="cover"
-              src="https://images.unsplash.com/photo-1531403009284-440f080d1e12?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
+              src={`https://api.lorem.space/image/shoes?w=150&h=15${index}`}
               alt="Chakra UI"
             />
           </GridItem>
@@ -76,7 +82,7 @@ export default function ReviewCard({ post }) {
             <Image
               boxSize="100px"
               objectFit="cover"
-              src="https://images.unsplash.com/photo-1531403009284-440f080d1e12?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
+              src={`https://api.lorem.space/image/shoes?w=150&h=15${index + 3}`}
               alt="Chakra UI"
             />
           </GridItem>
@@ -84,7 +90,7 @@ export default function ReviewCard({ post }) {
             <Image
               boxSize="100px"
               objectFit="cover"
-              src="https://images.unsplash.com/photo-1531403009284-440f080d1e12?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
+              src={`https://api.lorem.space/image/shoes?w=150&h=15${index + 6}`}
               alt="Chakra UI"
             />
           </GridItem>
