@@ -1,5 +1,8 @@
-import { Text } from '@chakra-ui/react';
+import { Link, Text } from '@chakra-ui/react';
+import NextLink from 'next/link';
 import HeroImage from '../components/cards/HeroImage';
+import HeroLink from '../components/HeroLink';
+import Footer from '../components/navigation/Footer';
 import Header from '../components/navigation/Header';
 import MainSection from '../components/templates/MainSection';
 
@@ -34,8 +37,43 @@ export default function business() {
             Let&apos;s grow and shape Copenhagen&apos;s creative community
             together! Start your application today and join the team!
           </Text>
+
+          <HeroLink
+            as={NextLink}
+            href="/business"
+            variant="primary"
+            alignSelf="center"
+            maxW={{ base: '300px', md: '280px' }}
+          >
+            Start here
+          </HeroLink>
+        </MainSection>
+
+        <MainSection sectionHeading="Share your ideas">
+          <Text variant={'body-paragraph'}>
+            Contribute to the creative community&apos;s growth by{' '}
+            <Link variant="inline-link" href="#">
+              sharing your experience
+            </Link>{' '}
+            and perspective! We&apos;re open to suggestions and looking forward
+            to having a chat with you!
+          </Text>
+
+          <Text variant={'body-paragraph'}>
+            Say{' '}
+            <Link
+              variant="inline-link"
+              href="mailto: hello@21motions.com"
+              isExternal
+            >
+              hello@21motions.com
+            </Link>{' '}
+            👋
+          </Text>
         </MainSection>
       </main>
+
+      <Footer />
     </>
   );
 }

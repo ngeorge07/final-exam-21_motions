@@ -12,7 +12,7 @@ export default function PropositionCard({ text, linkText, isHome }) {
       <Flex
         direction={{ base: 'column', md: 'row' }}
         maxW={{ sm: '500px' }}
-        w={isHome ? { base: '90%' } : '100%'}
+        w="90%"
         justifyContent={isHome ? 'space-between' : 'center'}
         alignItems="center"
         gap="5"
@@ -27,8 +27,11 @@ export default function PropositionCard({ text, linkText, isHome }) {
           as={NextLink}
           href="/business"
           variant="primary"
-          w={isHome ? { base: '98%', md: '50%' } : '90%'}
-          maxW={isHome ? { base: '320px', sm: '390px' } : 'auto'}
+          w={
+            isHome
+              ? { base: '98%', md: '50%' }
+              : { base: '98%', sm: '70%', md: '80%' }
+          }
         >
           {linkText}
         </HeroLink>
