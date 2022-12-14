@@ -11,7 +11,7 @@ import {
 import { Box, HStack, Icon, Text, useColorModeValue } from '@chakra-ui/react';
 
 export default function Footer() {
-  const iconColor = useColorModeValue('#000', '#FFF');
+  const iconColor = useColorModeValue('black', 'white');
 
   return (
     <Box

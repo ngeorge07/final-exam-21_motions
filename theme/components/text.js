@@ -1,3 +1,4 @@
+
 const Text = {
   variants: {
     'body-paragraph': {
@@ -8,6 +9,7 @@ const Text = {
 
     "review-paragraph": {
       fontFamily: `'Roboto', sans-serif`,
+      fontSize: 14,
     }
   },
 };

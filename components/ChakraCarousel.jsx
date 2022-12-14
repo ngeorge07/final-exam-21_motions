@@ -1,5 +1,16 @@
 //TODO: Properly handle user tabbing
 
+import {
+  Box,
+  Button,
+  Flex,
+  Icon,
+  Progress,
+  useColorModeValue,
+  useMediaQuery,
+  useTheme,
+  VStack,
+} from '@chakra-ui/react';
 import React, {
   useCallback,
   useEffect,
@@ -7,17 +18,6 @@ import React, {
   useRef,
   useState,
 } from 'react';
-
-import {
-  Box,
-  Button,
-  Flex,
-  Icon,
-  Progress,
-  useMediaQuery,
-  useTheme,
-  VStack,
-} from '@chakra-ui/react';
 
 import { motion, useAnimation, useMotionValue } from 'framer-motion';
 import { IoArrowBackSharp, IoArrowForwardSharp } from 'react-icons/io5';
@@ -140,6 +140,7 @@ const Slider = ({
   gap,
 }) => {
   const [ref, { width }] = useBoundingRect();
+  const iconColor = useColorModeValue('black', 'white');
 
   useEffect(() => initSliderWidth(Math.round(width)), [width, initSliderWidth]);
 
@@ -195,13 +196,20 @@ const Slider = ({
           onClick={handleDecrementClick}
           onFocus={handleFocus}
           mr={`${gap / 3}px`}
-          color="gray.200"
+          color={iconColor}
           variant="link"
           minW={0}
+          disabled={
+            percentage(activeItem, positions.length - constraint) === 0 && true
+          }
         >
           <Icon
-            _hover={{ color: 'american_green' }}
-            boxSize={7}
+            _hover={
+              percentage(activeItem, positions.length - constraint) > 0 && {
+                color: 'american_green',
+              }
+            }
+            boxSize={10}
             as={IoArrowBackSharp}
           />
         </Button>
@@ -210,12 +218,12 @@ const Slider = ({
           value={percentage(activeItem, positions.length - constraint)}
           alignSelf="center"
           borderRadius="2px"
-          bg="base.d100"
+          bg="silver_foil"
           flex={1}
-          h="3px"
+          h="4.5px"
           sx={{
             '> div': {
-              backgroundColor: 'gray.400',
+              backgroundColor: 'american_green',
             },
           }}
         />
@@ -224,14 +232,22 @@ const Slider = ({
           onClick={handleIncrementClick}
           onFocus={handleFocus}
           ml={`${gap / 3}px`}
-          color="gray.200"
+          color={iconColor}
           variant="link"
           zIndex={2}
           minW={0}
+          disabled={
+            percentage(activeItem, positions.length - constraint) === 100 &&
+            true
+          }
         >
           <Icon
-            _hover={{ color: 'american_green' }}
-            boxSize={7}
+            _hover={
+              percentage(activeItem, positions.length - constraint) < 100 && {
+                color: 'american_green',
+              }
+            }
+            boxSize={10}
             as={IoArrowForwardSharp}
           />
         </Button>
