@@ -57,9 +57,7 @@ export default function Home() {
           </Text>
         </MainSection>
 
-        <MainSection>
-          <TeamWrapper />
-        </MainSection>
+        <TeamWrapper />
       </main>
 
       <Footer />
