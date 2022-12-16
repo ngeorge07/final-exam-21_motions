@@ -16,6 +16,7 @@ export default function HeroVideo() {
           linkText="For businesses"
           text="ROOTED IN CREATIVITY. CONNECTED BY GROWTH"
         />
+
         <video className={hero_video} autoPlay muted loop>
           <source src="/home/21motions-promo.mp4" type="video/mp4" />
           Your browser does not support the video tag.

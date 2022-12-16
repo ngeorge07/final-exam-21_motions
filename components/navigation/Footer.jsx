@@ -28,7 +28,7 @@ export default function Footer() {
       </Text>
 
       <HStack justifyContent="center" gap={4} mt={3} mb={14} flexWrap="wrap">
-        <Link href="#">
+        <Link aria-label="LinkedIN" href="#">
           <Icon
             color={iconColor}
             _hover={{ color: 'american_green' }}
@@ -36,7 +36,7 @@ export default function Footer() {
             as={IoLogoLinkedin}
           />
         </Link>
-        <Link href="#">
+        <Link aria-label="Facebook" href="#">
           <Icon
             color={iconColor}
             _hover={{ color: 'american_green' }}
@@ -44,7 +44,7 @@ export default function Footer() {
             as={IoLogoFacebook}
           />
         </Link>
-        <Link href="#">
+        <Link aria-label="YouTube" href="#">
           <Icon
             color={iconColor}
             _hover={{ color: 'american_green' }}
@@ -52,7 +52,7 @@ export default function Footer() {
             as={IoLogoYoutube}
           />
         </Link>
-        <Link href="#">
+        <Link aria-label="Instagram" href="#">
           <Icon
             color={iconColor}
             _hover={{ color: 'american_green' }}
@@ -60,7 +60,7 @@ export default function Footer() {
             as={IoLogoInstagram}
           />
         </Link>
-        <Link href="#">
+        <Link aria-label="TikTok" href="#">
           <Icon
             color={iconColor}
             _hover={{ color: 'american_green' }}

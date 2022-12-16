@@ -34,7 +34,7 @@ export default function Header() {
       justifyContent="space-between"
       alignItems="center"
     >
-      <Link as={NextLink} href="/">
+      <Link aria-label="Home" as={NextLink} href="/" onClick={onClose}>
         <Logo />
       </Link>
 
@@ -54,7 +54,7 @@ export default function Header() {
         onClose={onClose}
         finalFocusRef={btnRef}
         size={{ base: 'full', sm: 'sm' }}
-        transition={{ duration: '5' }}
+        blockScrollOnMount={false}
       >
         <DrawerOverlay />
 
@@ -69,17 +69,28 @@ export default function Header() {
             alignItems="center"
             gap={5}
           >
-            <Link as={NextLink} href="/" variant="menu-link">
+            <Link as={NextLink} href="/" variant="menu-link" onClick={onClose}>
               Home
             </Link>
-            <Link as={NextLink} href="/creator" variant="menu-link">
+            <Link
+              as={NextLink}
+              href="/creator"
+              variant="menu-link"
+              onClick={onClose}
+            >
               Video creators
             </Link>
-            <Link as={NextLink} href="/business" variant="menu-link">
+            <Link
+              as={NextLink}
+              href="/business"
+              variant="menu-link"
+              onClick={onClose}
+            >
               For businesses
             </Link>
 
             <Button
+              name="color-mode"
               onClick={toggleColorMode}
               variant="outline"
               border="none"
