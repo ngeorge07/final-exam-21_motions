@@ -1,6 +1,5 @@
-import { chakra, Flex, Heading, Text } from '@chakra-ui/react';
+import { Avatar, Flex, Heading, Text } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
-import NextImage from 'next/image';
 
 const variants = {
   visible: {
@@ -11,8 +10,6 @@ const variants = {
 };
 
 export default function TeamMember({ name, title }) {
-  const Image = chakra(NextImage);
-
   return (
     <Flex
       as={motion.div}
@@ -21,8 +18,7 @@ export default function TeamMember({ name, title }) {
       direction="column"
       textAlign="center"
     >
-      <Image
-        alt={`Team member: ${name}`}
+      <Avatar
         size={{ base: 'xl', sm: '2xl' }}
         name={name}
         src={`/home/${name.split(' ')[0]}-portrait.png`}
