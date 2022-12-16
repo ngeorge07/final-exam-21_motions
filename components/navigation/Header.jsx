@@ -90,7 +90,7 @@ export default function Header() {
             </Link>
 
             <Button
-              name="color-mode"
+              aria-label="color-mode"
               onClick={toggleColorMode}
               variant="outline"
               border="none"

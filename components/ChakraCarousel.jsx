@@ -192,7 +192,7 @@ const Slider = ({
 
       <Flex w={`${itemWidth}px`} mt={`${gap / 2}px`} mx="auto">
         <Button
-          name="back-arrow"
+          aria-label="back-arrow"
           onClick={handleDecrementClick}
           onFocus={handleFocus}
           mr={`${gap / 3}px`}
@@ -229,7 +229,7 @@ const Slider = ({
         />
 
         <Button
-          name="forward-arrow"
+          aria-label="forward-arrow"
           onClick={handleIncrementClick}
           onFocus={handleFocus}
           ml={`${gap / 3}px`}
