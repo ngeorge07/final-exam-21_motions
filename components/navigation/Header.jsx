@@ -46,7 +46,7 @@ export default function Header() {
         _hover={{ background: 'none' }}
         _active={{ background: 'none' }}
         onClick={isOpen ? onClose : onOpen}
-        aria-label="ana"
+        aria-label="Burger menu icon"
       ></Box>
 
       <Drawer
