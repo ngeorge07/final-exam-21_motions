@@ -7,7 +7,6 @@ import '@fontsource/roboto-slab/600.css';
 
 import { ChakraProvider } from '@chakra-ui/react';
 import Layout from '../components/layouts/Layout';
-import '../styles/globals.css';
 import theme from '../theme/index';
 
 function MyApp({ Component, pageProps }) {
