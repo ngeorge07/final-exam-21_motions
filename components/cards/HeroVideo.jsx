@@ -5,6 +5,7 @@ import PropositionSection from '../templates/PropositionSection';
 export default function HeroVideo() {
   return (
     <AspectRatio
+      as="section"
       _before={{ content: 'none' }}
       w="100%"
       h={{ base: '70vh', sm: '100vh' }}

@@ -5,7 +5,6 @@ import {
   CardBody,
   CardFooter,
   CardHeader,
-  Flex,
   Grid,
   GridItem,
   Heading,
@@ -22,6 +21,7 @@ export default function ReviewCard({ post, index }) {
 
   return (
     <Card
+      as="article"
       borderRadius="xl"
       overflow="hidden"
       backgroundColor={cardBg}
@@ -29,48 +29,47 @@ export default function ReviewCard({ post, index }) {
       py={4}
       boxShadow="rgba(0, 0, 0, 0.16) 1px 2.5px 0px, rgba(0, 0, 0, 0.23) 4.3px 0px 3px"
     >
-      <CardHeader p={0}>
-        <Flex
-          flex="1"
-          gap="4"
-          alignItems="center"
-          flexWrap="wrap"
-          justifyContent="space-between"
-        >
-          <Box>
-            <Heading size={{ base: 'md', lg: 'lg' }}>
-              {post.name ? post.name : 'Segun Adebayo'}
-            </Heading>
-            <Text
-              variant="review-paragraph"
-              fontWeight="semibold"
-              color={accentTextColor}
-            >
-              {post.job ? post.job : 'Creator, Chakra UI'}
-            </Text>
-          </Box>
+      <CardHeader
+        as="section"
+        p={0}
+        display="flex"
+        alignItems="center"
+        flexWrap="wrap"
+        justifyContent="space-between"
+      >
+        <Box>
+          <Heading size={{ base: 'md', lg: 'lg' }} as="h3">
+            {post.name ? post.name : 'Segun Adebayo'}
+          </Heading>
+          <Text
+            variant="review-paragraph"
+            fontWeight="semibold"
+            color={accentTextColor}
+          >
+            {post.job ? post.job : 'Creator, Chakra UI'}
+          </Text>
+        </Box>
 
-          <Avatar
-            size="lg"
-            name={post.name ? post.name : 'Segun Adebayo'}
-            src={
-              post.profileImage
-                ? post.profileImage
-                : 'https://bit.ly/sage-adebayo'
-            }
-            boxShadow="rgba(0, 0, 0, 0.3) 2px 2.4px 2px"
-          />
-        </Flex>
+        <Avatar
+          size="lg"
+          name={post.name ? post.name : 'Segun Adebayo'}
+          src={
+            post.profileImage
+              ? post.profileImage
+              : 'https://bit.ly/sage-adebayo'
+          }
+          boxShadow="rgba(0, 0, 0, 0.3) 2px 2.4px 2px"
+        />
       </CardHeader>
 
-      <CardBody p={0} mt={10}>
-        <Heading as="h3" variant="review-heading" mb={3}>
+      <CardBody p={0} mt={10} as="section">
+        <Heading as="h4" variant="review-heading" mb={3}>
           {post.title}
         </Heading>
 
         <Text variant="review-paragraph">{post.body}</Text>
 
-        <Grid templateColumns="repeat(3, 1fr)" gap={6} mt={10}>
+        <Grid as="section" templateColumns="repeat(3, 1fr)" gap={6} mt={10}>
           <GridItem justifySelf="center">
             <Image
               boxSize="100px"
@@ -78,7 +77,9 @@ export default function ReviewCard({ post, index }) {
               src={`https://api.lorem.space/image/shoes?w=150&h=15${
                 index <= 9 ? index : '3'
               }`}
-              alt="Chakra UI"
+              alt={`Profile picture of ${
+                post.name ? post.name : 'Segun Adebayo'
+              }`}
             />
           </GridItem>
           <GridItem justifySelf="center">
@@ -88,7 +89,9 @@ export default function ReviewCard({ post, index }) {
               src={`https://api.lorem.space/image/shoes?w=150&h=15${
                 index <= 6 ? index + 3 : '6'
               }`}
-              alt="Chakra UI"
+              alt={`Profile picture of ${
+                post.name ? post.name : 'Segun Adebayo'
+              }`}
             />
           </GridItem>
           <GridItem justifySelf="center">
@@ -98,13 +101,15 @@ export default function ReviewCard({ post, index }) {
               src={`https://api.lorem.space/image/shoes?w=150&h=15${
                 index <= 3 ? index + 6 : '9'
               }`}
-              alt="Chakra UI"
+              alt={`Profile picture of ${
+                post.name ? post.name : 'Segun Adebayo'
+              }`}
             />
           </GridItem>
         </Grid>
       </CardBody>
 
-      <CardFooter justifyContent="flex-end">
+      <CardFooter as="section" justifyContent="flex-end">
         <Text
           display="flex"
           alignItems="center"

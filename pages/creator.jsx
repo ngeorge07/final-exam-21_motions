@@ -9,6 +9,7 @@ export default function creator() {
   return (
     <>
       <HeroImage
+        alt="a barman smiling while preparing a drink"
         img="creator"
         text="CREATE VIDEO CONTENT FOR LOCAL BUSINESSES"
         linkText="Submit your application"
@@ -48,17 +49,19 @@ export default function creator() {
         </HeroLink>
       </MainSection>
 
-      <Heading
-        as="h2"
-        variant="h2"
-        ml={{ base: 30 }}
-        mr={{ base: 22 }}
-        mx={{ sm: 70, md: 100, lg: 200 }}
-        justifyContent={{ base: 'flex-start', md: 'center' }}
-      >
-        Meet your future peers
-      </Heading>
-      <CarouselContainer creator={true} />
+      <section>
+        <Heading
+          as="h2"
+          variant="h2"
+          ml={{ base: 30 }}
+          mr={{ base: 22 }}
+          mx={{ sm: 70, md: 100, lg: 200 }}
+          justifyContent={{ base: 'flex-start', md: 'center' }}
+        >
+          Meet your future peers
+        </Heading>
+        <CarouselContainer creator={true} />
+      </section>
 
       <MainSection sectionHeading="Share your ideas" icon={About}>
         <Text variant={'body-paragraph'}>

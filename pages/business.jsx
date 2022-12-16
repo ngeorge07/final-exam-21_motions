@@ -9,6 +9,7 @@ export default function business() {
   return (
     <>
       <HeroImage
+        alt="a pair of hands working at a well light keyboard"
         img="business"
         text="CONNECT WITH THE BEST MATCHING VIDEO CREATORS"
         linkText="Start a collaboration"
@@ -49,17 +50,19 @@ export default function business() {
         </HeroLink>
       </MainSection>
 
-      <Heading
-        as="h2"
-        variant="h2"
-        ml={{ base: 30 }}
-        mr={{ base: 22 }}
-        mx={{ sm: 70, md: 100, lg: 200 }}
-        justifyContent={{ base: 'flex-start', md: 'center' }}
-      >
-        Hear from business members
-      </Heading>
-      <CarouselContainer />
+      <section>
+        <Heading
+          as="h2"
+          variant="h2"
+          ml={{ base: 30 }}
+          mr={{ base: 22 }}
+          mx={{ sm: 70, md: 100, lg: 200 }}
+          justifyContent={{ base: 'flex-start', md: 'center' }}
+        >
+          Hear from business members
+        </Heading>
+        <CarouselContainer />
+      </section>
 
       <MainSection sectionHeading="Learn more" icon={Worm}>
         <Text variant={'body-paragraph'}>

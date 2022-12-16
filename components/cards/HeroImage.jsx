@@ -1,7 +1,7 @@
 import { Grid, GridItem, Image, useToast } from '@chakra-ui/react';
 import PropositionSection from '../templates/PropositionSection';
 
-export default function HeroImage({ text, linkText, img }) {
+export default function HeroImage({ text, linkText, img, alt }) {
   return (
     <Grid as="section" display="grid">
       <GridItem colStart={1} colEnd={2} rowStart={1} rowEnd={2}>
@@ -11,7 +11,7 @@ export default function HeroImage({ text, linkText, img }) {
           }
           fit="cover"
           src={`/${img}/${img}-hero.jpg`}
-          alt="hero"
+          alt={`Hero image that covers the screen showing ${alt}`}
           width="100vw"
           height="100vh"
           boxShadow="black 0px 0px 25px 5px"
