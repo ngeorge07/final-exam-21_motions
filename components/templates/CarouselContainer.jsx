@@ -1,6 +1,6 @@
 import { Container } from '@chakra-ui/react';
 import { useEffect, useState } from 'react';
-import ReviewCard from './cards/ReviewCard';
+import ReviewCard from '../cards/ReviewCard';
 import ChakraCarousel from './ChakraCarousel';
 
 export default function CarouselContainer({ creator }) {

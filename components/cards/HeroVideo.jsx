@@ -1,6 +1,6 @@
-import { AspectRatio } from '@chakra-ui/react';
+import { AspectRatio, useToast } from '@chakra-ui/react';
 import { hero_video } from '../../styles/Hero.module.scss';
-import PropositionCard from './PropositionCard';
+import PropositionSection from '../templates/PropositionSection';
 
 export default function HeroVideo() {
   return (
@@ -11,10 +11,11 @@ export default function HeroVideo() {
       ratio={16 / 9}
     >
       <>
-        <PropositionCard
+        <PropositionSection
           isHome={true}
           linkText="For businesses"
           text="ROOTED IN CREATIVITY. CONNECTED BY GROWTH"
+          useToast={useToast}
         />
 
         <video className={hero_video} autoPlay muted loop>

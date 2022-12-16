@@ -1,12 +1,11 @@
 import { Heading, Link, Text } from '@chakra-ui/react';
-import NextLink from 'next/link';
 import HeroImage from '../components/cards/HeroImage';
-import CarouselContainer from '../components/CarouselContainer';
-import HeroLink from '../components/HeroLink';
+import HeroLink from '../components/chakra/HeroLink';
 import Worm from '../components/SVGs/Worm';
+import CarouselContainer from '../components/templates/CarouselContainer';
 import MainSection from '../components/templates/MainSection';
 
-export default function creator() {
+export default function business() {
   return (
     <>
       <HeroImage
@@ -40,13 +39,13 @@ export default function creator() {
         </video>
 
         <HeroLink
-          as={NextLink}
+          as={'button'}
           href="/business"
           variant="primary"
           alignSelf="center"
           maxW={{ base: '300px', md: '280px' }}
         >
-          Get started here
+          Start a collaboration
         </HeroLink>
       </MainSection>
 

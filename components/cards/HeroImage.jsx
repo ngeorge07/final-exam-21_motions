@@ -1,5 +1,5 @@
-import { Grid, GridItem, Image } from '@chakra-ui/react';
-import PropositionCard from './PropositionCard';
+import { Grid, GridItem, Image, useToast } from '@chakra-ui/react';
+import PropositionSection from '../templates/PropositionSection';
 
 export default function HeroImage({ text, linkText, img }) {
   return (
@@ -27,7 +27,11 @@ export default function HeroImage({ text, linkText, img }) {
         justifySelf="center"
         zIndex={2}
       >
-        <PropositionCard text={text} linkText={linkText} />
+        <PropositionSection
+          text={text}
+          linkText={linkText}
+          useToast={useToast}
+        />
       </GridItem>
     </Grid>
   );

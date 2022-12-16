@@ -1,12 +1,11 @@
 import { Heading, Link, Text } from '@chakra-ui/react';
-import NextLink from 'next/link';
 import HeroImage from '../components/cards/HeroImage';
-import CarouselContainer from '../components/CarouselContainer';
-import HeroLink from '../components/HeroLink';
+import HeroLink from '../components/chakra/HeroLink';
 import About from '../components/SVGs/About';
+import CarouselContainer from '../components/templates/CarouselContainer';
 import MainSection from '../components/templates/MainSection';
 
-export default function business() {
+export default function creator() {
   return (
     <>
       <HeroImage
@@ -40,13 +39,12 @@ export default function business() {
         </Text>
 
         <HeroLink
-          as={NextLink}
-          href="/business"
+          as={'button'}
           variant="primary"
           alignSelf="center"
           maxW={{ base: '300px', md: '280px' }}
         >
-          Start here
+          Submit your application
         </HeroLink>
       </MainSection>
 

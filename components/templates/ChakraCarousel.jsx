@@ -20,7 +20,7 @@ import React, {
   useState,
 } from 'react';
 import { IoArrowBackSharp, IoArrowForwardSharp } from 'react-icons/io5';
-import { useBoundingRect } from '../hooks/';
+import { useBoundingRect } from '../../hooks';
 const MotionFlex = motion(Flex);
 
 const transitionProps = {
